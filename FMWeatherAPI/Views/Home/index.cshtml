@@ -1,0 +1,36 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <title>Weather Dashboard</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+   
+    <link href="~/Content/custom.css" rel="stylesheet" />
+    <script src="~/scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/angular-route.js"></script>
+    <script src="~/Scripts/highcharts.js"></script>
+
+    <script src="~/Scripts/app/app.module.js"></script>
+    <script src="~/Scripts/app/layout/shell.module.js"></script>
+    <script src="~/Scripts/app/layout/shell.ctrl.js"></script>
+    <script src="~/Scripts/app/search/search.module.js"></script>
+    <script src="~/Scripts/app/search/search.ctrl.js"></script>
+    <script src="~/Scripts/app/weather/weather.module.js"></script>
+    <script src="~/Scripts/app/weather/weather.ctrl.js"></script>
+    <script src="~/Scripts/app/forecast/forecast.module.js"></script>
+    <script src="~/Scripts/app/forecast/forecast.ctrl.js"></script>
+    <script src="~/Scripts/app/component/component.module.js"></script>
+    <script src="~/Scripts/app/component/search.view.js"></script>
+    <script src="~/Scripts/app/data/data.module.js"></script>
+    <script src="~/Scripts/app/data/weather.svc.js"></script>
+    <script src="~/Scripts/app/forecast/forecast.view.js"></script>
+</head>
+<body>
+    <ng-include src="'scripts/app/layout/shell.html'"></ng-include>
+</body>
+</html>

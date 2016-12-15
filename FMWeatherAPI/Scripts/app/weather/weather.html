@@ -1,0 +1,51 @@
+﻿<div class="row">
+    <div class="col-md-11 well weather-current">
+        <div>
+            <h2>{{current.name}}, {{current.sys.country}}</h2>
+            <ul class="list-inline">
+                <li><img ng-src="http://openweathermap.org/img/w/{{current.weather[0].icon}}.png" /></li>
+                <li><h2>{{current.main.temp | number:0}} &#8457;</h2></li>
+            </ul>
+            <h4>{{current.weather[0].main}}</h4>
+            <p>Got at: {{getTime(current.dt) | date: 'yyyy-MMM-dd HH:mm'}}</p>
+            <div class="col-md-4">
+                <table class="table table-striped table-bordered table-condensed">
+                    <tbody>
+                        <tr>
+                            <td>Wind</td>
+                            <td>Speed {{current.wind.speed | number:0}} mph</td>
+                        </tr>
+                        <tr>
+                            <td>Cloudiness</td>
+                            <td>{{current.weather[0].description}}</td>
+                        </tr>
+                        <tr>
+                            <td>Pressure</td>
+                            <td>{{current.main.pressure}} hPa</td>
+                        </tr>
+                        <tr>
+                            <td>Humidity</td>
+                            <td>{{current.main.humidity}} %</td>
+                        </tr>
+                        <tr>
+                            <td>Sunrise</td>
+                            <td>{{getTime(current.sys.sunrise) | date: 'h:mm a' : '-0500'}}</td>
+                        </tr>
+                        <tr>
+                            <td>Sunset</td>
+                            <td>{{getTime(current.sys.sunset) | date: 'h:mm a' : '-0500'}}</td>
+                        </tr>
+                        <tr>
+                            <td>Geo coords</td>
+                            <td>[{{current.coord.lon}}, {{current.coord.lat}}]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row weather-controls">
+    <a href="#/search" class="btn btn-info">Back to Search</a>
+    <a href="#/forecast/{{current.id}}" class="btn btn-info">Show Forecast</a>
+</div>

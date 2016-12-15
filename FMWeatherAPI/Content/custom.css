@@ -1,0 +1,221 @@
+﻿body {
+    background-color: #f5f7fa;
+}
+
+.search {
+    padding-left: 40px;
+}
+
+.cities {
+    margin-top: 20px;
+}
+
+.weather-current {
+    margin-top: 20px;
+    margin-left: 18px;
+}
+
+.weather-controls {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.forecast-list {
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.weather-table-scroller {
+    overflow-x: auto;
+    overflow-y: visible;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: auto;
+    -webkit-transform: translate3d(0,0,0);
+    border-bottom: none;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}
+
+.weather-table {
+    padding-left: 145px;
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0;
+    display: block;
+    overflow: auto;
+    table-layout: fixed;
+    color: #393939;
+}
+
+    .weather-table th.sticky-col {
+        border-right: none;
+    }
+
+    .weather-table .sticky-col {
+        border-right: none;
+        overflow: visible;
+        left: 0;
+        position: absolute;
+        top: auto;
+        margin-left: 25px;
+        width: 150px;
+        -webkit-transform: translate3d(0,0,0);
+        -webkit-backface-visibility: hidden;
+        -webkit-perspective: 1000;
+    }
+
+    .weather-table th {
+        border: none;
+        color: #393939;
+        padding: 10px;
+        text-align: left;
+        text-shadow: 1px 1px 1px #fff;
+        white-space: nowrap;
+        text-transform: uppercase;
+        font-weight: 600;
+        border-bottom: solid 1px #999999;
+        background-color: #eef6fb;
+    }
+
+    .weather-table td.sticky-col {
+        background-color: #fff;
+        z-index: 1;
+    }
+
+    .weather-table td {
+        border-bottom: solid 1px #999999;
+        padding: 5px 10px;
+        white-space: nowrap;
+        height: 50px;
+    }
+
+    .weather-table .description {
+        padding-left: 15px;
+        width: 30%;
+    }
+
+    .weather-table .sticky-col .date-time {
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .weather-table .wx-weather-icon {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        right: 10px;
+    }
+
+    .weather-table .day-detail {
+        color: #cccccc;
+    }
+
+        .weather-table .day-detail:before,
+        .weather-table .day-detail:after {
+            content: ".";
+            display: block;
+            height: 0;
+            overflow: hidden;
+        }
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.weather-table-shadow {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    background-size: 100%;
+    background-image: -webkit-gradient(linear,0% 50%,100% 50%,color-stop(0%,rgba(0,0,0,0)),color-stop(100%,rgba(0,0,0,0.15)));
+    background-image: -moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15));
+    background-image: -webkit-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15));
+    background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,0.15));
+    height: 100%;
+}
+
+    .weather-table-shadow.sticky {
+        width: 10px;
+        right: -10px;
+        background-size: 100%;
+        background-image: -webkit-gradient(linear,0% 50%,100% 50%,color-stop(0%,rgba(0,0,0,0.15)),color-stop(100%,rgba(0,0,0,0)));
+        background-image: -moz-linear-gradient(left,rgba(0,0,0,0.15),rgba(0,0,0,0));
+        background-image: -webkit-linear-gradient(left,rgba(0,0,0,0.15),rgba(0,0,0,0));
+        background-image: linear-gradient(to right,rgba(0,0,0,0.15),rgba(0,0,0,0));
+    }
+
+
+.panel {
+    background-color: #fff;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.14),0 2px 2px 0 rgba(0,0,0,.098),0 1px 5px 0 rgba(0,0,0,.084);
+    border: 0;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+    .panel.panel-default {
+        border-top-width: 3px;
+    }
+
+    .panel .panel-heading {
+        border-bottom: 0;
+        font-size: 14px;
+    }
+
+.panel-default > .panel-heading {
+    color: #444;
+    background-color: #fff;
+    border-color: #cfdbe2;
+}
+
+.widget {
+    margin-bottom: 20px;
+    border: 0;
+}
+
+    .widget.panel, .widget .panel {
+        overflow: hidden;
+    }
+
+.row-table {
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+    .row-table > [class*=col-] {
+        display: table-cell;
+        float: none;
+        table-layout: fixed;
+        vertical-align: middle;
+    }
+
+.bg-info {
+    background-color: #2196f3;
+    color: #fff !important;
+}
+
+    .bg-info img {
+        height: 100px;
+        width: 100px;
+    }
+
+.pv {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+.br {
+    border-right: 1px solid rgba(0,0,0,.12);
+}
+
+.nbr {
+    border-right: none;
+}

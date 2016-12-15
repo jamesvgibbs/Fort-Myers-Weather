@@ -1,0 +1,32 @@
+﻿
+Use epoch for all dates
+
+Done - Connect to Database
+Done - Create Weather Object
+Done - Create to/from epoch
+
+Done - Create Get for Date Weather
+Create Get for Week of Weather
+Create Get for Month of Weather
+Create Get for Year of Weather
+
+Started - Create Get All Weather
+
+Started - Create Get for High/Low for Date
+Started - Create Get for High/Low for Week by Day
+Started - Create Get for High/Low for Month by Week
+Create Get for High/Low for Year by Month
+
+Done - Add Index for Date Column
+
+
+Create UI
+Two Tabs (Areas)
+
+Tab One
+Show Calendar on Left
+Select Date/Day Get Weather for Day
+
+Tab Two
+Change View for Day, Week, Month
+Select Date/Day Get Weather for Day

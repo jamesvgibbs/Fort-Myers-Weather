@@ -1,0 +1,31 @@
+﻿<div ng-controller="Shell">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    Weather Dashboard
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Time Period <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Day</a></li>
+                            <li><a href="#">Week</a></li>
+                            <li><a href="#">Month</a></li>
+                            <li><a href="#">Year</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">All</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid" ng-view>
+    </div>
+</div>

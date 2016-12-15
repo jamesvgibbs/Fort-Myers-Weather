@@ -1,0 +1,48 @@
+﻿<div class="row">
+    <div class="col-md-12 search">
+        <edgzy-search-box></edgzy-search-box>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 cities">
+        <div class="row">
+            <div class="col-md-4" ng-repeat="city in cities">
+                <div class="panel widget">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <b><a href="#/forecast/{{city.id}}">{{city.name}}, {{city.sys.country}}</a></b>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 pv text-center">
+                                <div class="text-muted text-md">
+                                    <img src="http://openweathermap.org/img/w/{{city.weather[0].icon}}.png">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="h1 m0 text-bold">
+                                    {{city.main.temp | number:0}} &#8457;
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <div class="text-info text-sm">
+                                    {{city.main.temp_min | number:0}}°/{{city.main.temp_max | number:0}}°
+                                </div>
+                                <div class="text-info text-sm">
+                                    {{courseToDirection(city.wind.deg)}} {{city.wind.speed | number:0}} mph
+                                </div>
+                                <div class="text-info text-sm">
+                                    Clouds {{city.clouds.all | number:0}}%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,107 @@
+﻿<div class="row weather-controls">
+    <a href="#/search" class="btn btn-info">Back to Search</a>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel widget">
+                    <div class="row row-table">
+                        <div class="col-md-2 col-sm-3 col-xs-6 text-center bg-info pv-xl">
+                            <img ng-src="http://openweathermap.org/img/w/{{current.weather[0].icon}}.png" />
+                        </div>
+                        <div class="col-md-2 col-sm-3 col-xs-6 pv br">
+                            <div class="h1 m0 text-bold">{{::current.main.temp | number:0}}°</div>
+                            <div class="text-uppercase">{{::current.weather[0].main}}</div>
+                            <div class="text-info">
+                                <span class="text-muted">
+                                    {{courseToDirection(current.wind.deg)}} {{::current.wind.speed | number:0}} mph
+                                </span>
+                            </div>
+                            <div class="text-muted">
+                                {{::current.main.temp_min | number:0}}°/{{::current.main.temp_max | number:0}}°
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-3 hidden-xs pv text-center br" ng-class="{'nbr':$last}" ng-repeat="weather in forecast.list | limitTo: 4:1">
+                            <div class="text-info text-sm">{{getTime(weather.dt) | date: "MMM dd"}}</div>
+                            <div class="text-muted text-md">
+                                <img src="http://openweathermap.org/img/w/{{weather.weather[0].icon}}.png">
+                            </div>
+                            <div class="text-info">
+                                <span class="text-muted">{{courseToDirection(weather.deg)}} {{::weather.speed | number:0}} mph</span>
+                            </div>
+                            <div class="text-muted">
+                                {{::weather.temp.min | number:0}}°/{{::weather.temp.max | number:0}}°
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">16 Day Forecast Chart</div>
+                    </div>
+                    <div class="panel-wrapper">
+                        <div class="panel-body">
+                            <edgzy-forecast dp="forecast"></edgzy-forecast>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-4">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">Weather Forecast for {{forecast.city.name}}</div>
+                    </div>
+                    <div class="panel-wrapper">
+                        <div class="panel-body weather-table-scroller">
+                            <table class="weather-table table table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th class="sticky-col">Day</th>
+                                        <th class="description">Description</th>
+                                        <th class="temp">High/Low</th>
+                                        <th class="wind">Wind</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="weather in forecast.list">
+                                        <td class="sticky-col">
+                                            <span class="date-time">{{getTime(weather.dt) | date: "EEE"}}</span>
+                                            <span class="wx-weather-icon">
+                                                <img src="http://openweathermap.org/img/w/{{weather.weather[0].icon}}.png">
+                                            </span>
+                                            <span class="day-detail clear">{{getTime(weather.dt) | date: "MMM dd"}}</span>
+                                            <div class="weather-table-shadow sticky"></div>
+                                        </td>
+                                        <td class="description">{{::weather.weather[0].main}}</td>
+                                        <td class="temp">{{::weather.temp.min | number:0}}°/{{::weather.temp.max | number:0}}°</td>
+                                        <td class="wind">{{courseToDirection(weather.deg)}} {{::weather.speed | number:0}} mph</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="row weather-controls">
+    <a href="#/search" class="btn btn-info">Back to Search</a>
+</div>
